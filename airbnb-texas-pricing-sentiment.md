@@ -16,6 +16,10 @@ A capstone project exploring the key drivers of listing price and guest satisfac
 - Loaded raw CSVs into pandas DataFrames (`df_austin`, `df_dallas`, `df_fortworth`)
 - Joined review scores and price from listings to reviews for enriched analysis
 
+**Source** 
+All raw Airbnb data for Austin, Dallas, and Fort Worth can be downloaded from the Inside Airbnb portal:  [Inside Airbnb – Get the Data](https://insideairbnb.com/get-the-data/)
+
+
 ## Data Cleaning 
 - **Price**: Stripped “$”/commas; converted to numeric. Imputed nulls with mean price by `(bedrooms × city)`. Removed outliers via whisker limits (1.5× IQR)
 - **Host Acceptance Rate**: Removed “%”; numeric conversion; filled missing with column mean
@@ -48,6 +52,9 @@ A capstone project exploring the key drivers of listing price and guest satisfac
   - *Unigrams/Bigrams/Trigrams:* Extracted n-grams to surface frequent themes (e.g., “great location,” “clean room”) 
   - *Word Cloud:* Visualized top tokens; confirmed overwhelmingly positive language
   - *Sentiment (VADER):* Classified comments into Positive (> 0.05), Neutral (±0.05), Negative (< −0.05); ~96% positive
+
+- [EDA & Modeling Notebook](https://github.com/shriya2911/Capstone_project/blob/main/EDA%2BModeling.ipynb) – EDA, Modeling & Evaluation (Pricing Data)
+- [Sentiment Analysis Notebook](https://github.com/shriya2911/Capstone_project/blob/main/Sentiment%20%2B%20Theme%20Classification.ipynb) - Sentiment & Text Analytics (Reviews Data) 
 
 ## Recommendations
 - **Prioritize High-Value Neighborhoods:** Focus pricing strategies on premium ZIPs (e.g., 78704 in Austin; Districts 11 & 8 in Dallas; Districts 3 & 4 in Fort Worth) to capture 20–35% higher ADRs.
